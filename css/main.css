@@ -52,10 +52,11 @@ img{
 /*Musical-Instrumet Quiz*/
 #musical-instrument-quiz, #broadway-quiz, #dance-quiz{
 	border: 10px solid #E8ADAA;
-    width: 100%;
+    width: 80%;
     background-color: #E8ADAA;
     margin-top: 0%;
     text-align: center;
+    margin-left: 10%;
 }
 
 #musical-instrument-quiz li, #broadway-quiz li, #dance-quiz li{
@@ -87,14 +88,6 @@ img{
 .btn{
 	background-color: #FAEBD7;
 }
-
-
-
-
-
-
-
-
 
 
 
