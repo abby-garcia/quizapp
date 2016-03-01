@@ -1,4 +1,11 @@
 
+
+/*line 27*/
+#first-page{
+	background-image: url(img/notes.jpg);
+}
+
+
 /*Title*/
 
 #title{
@@ -26,6 +33,35 @@ img{
 	font-family: 'Bentham', serif;
 }
 
+/*Social Media Share*/
+
+
+.social{
+	margin-top: 4%;
+	text-align: center;
+	font-family: 'Bentham', serif;
+}
+
+.social li{
+	text-decoration: none;
+	list-style-type: none;
+	display: inline;
+}
+
+
+/*Correct Box*/
+
+.correct-boxed {
+	border: 1px solid green;
+    width: 41%;
+}
+
+.correct-green{
+ 	border: 10px solid #4BAD21;
+    width: 100%;
+    background-color: #4BAD21;
+
+}
 
 
 
