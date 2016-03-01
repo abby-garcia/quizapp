@@ -50,8 +50,7 @@ img{
 
 
 /*Musical-Instrumet Quiz*/
-
-#musical-instrument-quiz{
+#musical-instrument-quiz, #broadway-quiz, #dance-quiz{
 	border: 10px solid #E67451;
     width: 100%;
     background-color: #E67451;
@@ -59,22 +58,30 @@ img{
     text-align: center;
 }
 
-#musical-instrument-quiz li{
+#musical-instrument-quiz li, #broadway-quiz li, #dance-quiz li{
 	list-style-type: none;
 }
 
+.question-countdown{
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 15px;
+}
+
 .question{
-
-
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 20px;
 }
 
 
-
-.new-game{
-
+#new-game button {
+	font-family: 'Fjalla One', sans-serif;
+	font-size: 15px;
+	width: 12%;
 }
 
-
+.row2{
+	margin-bottom: 1%;
+}
 
 
 
