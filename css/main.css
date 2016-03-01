@@ -49,6 +49,42 @@ img{
 }
 
 
+/*Musical-Instrumet Quiz*/
+
+#musical-instrument-quiz{
+	border: 10px solid #E67451;
+    width: 100%;
+    background-color: #E67451;
+    margin-top: 0%;
+
+}
+
+#musical-instrument-quiz li{
+	list-style-type: none;
+}
+
+.question{
+
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Correct Box*/
 
 .correct-boxed {
@@ -83,21 +119,39 @@ img{
 	font-family: 'Righteous', cursive;
 }
 
-.wrong-green{
+.wrong-red{
  	border: 10px solid #E41B17;
     width: 100%;
     background-color: #E41B17;
     margin-top: 0%;
 }
 
-.wrong-green{
+.wrong-red{
 	font-family: 'Righteous', cursive;
 }
 
 
+/*Completed Box*/
 
+.complete-boxed {
+	border: 1px solid green;
+    width: 41%;
+}
 
+.complete-boxed h3{
+	font-family: 'Righteous', cursive;
+}
 
+.complete-blue{
+ 	border: 10px solid #1589FF;
+    width: 100%;
+    background-color: #1589FF;
+    margin-top: 0%;
+}
+
+.complete-blue{
+	font-family: 'Righteous', cursive;
+}
 
 
 
