@@ -1,11 +1,5 @@
 
 
-/*line 27*/
-#first-page{
-	background-image: url(img/notes.jpg);
-}
-
-
 /*Title*/
 
 #title{
@@ -57,6 +51,7 @@ img{
     margin-top: 0%;
     text-align: center;
     margin-left: 10%;
+    display:none;
 }
 
 #musical-instrument-quiz li, #broadway-quiz li, #dance-quiz li{
@@ -98,6 +93,7 @@ img{
 .correct-boxed {
 	border: 1px solid green;
     width: 41%;
+    display:none;
 }
 
 .correct-boxed h3{
@@ -121,6 +117,7 @@ img{
 .wrong-boxed {
 	border: 1px solid green;
     width: 41%;
+    display:none;
 }
 
 .wrong-boxed h3{
@@ -144,6 +141,7 @@ img{
 .complete-boxed {
 	border: 1px solid green;
     width: 41%;
+    display:none;
 }
 
 .complete-boxed h3{
