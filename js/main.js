@@ -8,37 +8,30 @@ $( document ).ready(function() {
 		$('#musical-instrument-quiz').hide();	
 	});
 
-	$('.takequiz').click(function(){
-		takeInstrumentQuiz();
+	$('.instrument_takequiz').click(function(){
+		$('#musical-instrument-quiz').show();
+		$('.boxes').hide();
+		$('.social').hide();
+		showquestion();
 	});
     
+	$('.answers').on('click', 'input', function(){
+		var selection = $(this).attr("id"); // now we have 0, 1, 2, 3
+		checkAnswer(selection);
 
 
-	//Biggest Question... How do I assign write or wrong answers. 
-	// Right now, I only have it so that when somone clicks on 
-	//any button that isn't the "new game" button, they are taken to the next question.
-	$(".question").text(instrument_question1.question);
+	});
+
+	
 	
 });  //jquery ends here
 
 //question variables
 var instrument_question1 = {
-	question: "What musical instrument was widely used in the Renaissance and Baroque periods?",
-	answer:["bass clarient", "harpsichord", "piano", "lute"],
+	q: "What musical instrument was widely used in the Renaissance and Baroque periods?",
+	a:["bass clarient", "harpsichord", "piano", "lute"],
 	correct: 1
 };
-
-
-answers();
-	function answers(){
-		var answer_array = instrument_question1.answer;
-		for(var i=0; i < answer_array.length; i++){
-			var answer = answer_array[i];
-			var answer_text = "<li class='col-md-6'> <input class='btn' type='submit' value='" + answer + "'> </li>";
-			$('.answers ul').append(answer_text);
-		};
-
-	};
 
 
 
@@ -73,11 +66,42 @@ var qCorrect = 0;
 var instrument_questions = [instrument_question1, instrument_question2, instrument_question3, instrument_question4, instrument_question5];
 
 
-function takeInstrumentQuiz(){
-	
-
-
+function showquestion(){
+	if(qCount >= instrument_questions.length){ // this check if you have reached the end of the quiz
+		alert("Done! You got " + qCorrect + " correct.");
+		qCount = 0;
+		qCorrect = 0;
+		$('#musical-instrument-quiz').hide();
+		$('.boxes').show();
+		$('.social').show();
+	} else{
+		var question = instrument_questions[qCount]; // has question loaded in, now target html
+		$('.question').html(question.q);
+		var html ="";
+		for (var i = 0; i < question.a.length; i++) {
+			html += "<li> <input id='"+ i +  "' name='answer' type='radio'/>";
+			html += "<label for='"+ i +"'>" + question.a[i] + "</label> </li>";
+		};
+		$('.answers').html(html);
+	}
 };
+	function checkAnswer(selection){
+		var question = instrument_questions[qCount];
+		if(selection == question.correct){
+			qCorrect++;
+		}
+		else{
+			
+		}
+		qCount++;
+		showquestion();
+	}
+
+
+//New Game - make this a function and make it call and reset everything.
+//Change the question title to the string of you're done! 
+
+
 
 
 

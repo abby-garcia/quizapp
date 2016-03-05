@@ -51,8 +51,8 @@ img{
     margin-top: 0%;
     text-align: center;
     margin-left: 10%;
-    /*display:none;
-*/}
+    display:none;
+}
 
 #musical-instrument-quiz li, #broadway-quiz li, #dance-quiz li{
 	list-style-type: none;
