@@ -68,23 +68,27 @@ var instrument_questions = [instrument_question1, instrument_question2, instrume
 
 function showquestion(){
 	if(qCount >= instrument_questions.length){ // this check if you have reached the end of the quiz
-		alert("Done! You got " + qCorrect + " correct.");
-		qCount = 0;
-		qCorrect = 0;
+		$('.complete-boxed').html("Done! You got " + qCorrect + " correct.").show();
+		// alert("Done! You got " + qCorrect + " correct."); //change this into showing the correct box. instead of an alert
+		qCount = 0; //this resets
+		qCorrect = 0;  //this resets
 		$('#musical-instrument-quiz').hide();
 		$('.boxes').show();
 		$('.social').show();
 	} else{
 		var question = instrument_questions[qCount]; // has question loaded in, now target html
-		$('.question').html(question.q);
-		var html ="";
-		for (var i = 0; i < question.a.length; i++) {
+		$('.question').html(question.q); // this changes the html of the class ".question" to the most current question in question.q
+		var html =""; //empty string
+		for (var i = 0; i < question.a.length; i++) {    
 			html += "<li> <input id='"+ i +  "' name='answer' type='radio'/>";
 			html += "<label for='"+ i +"'>" + question.a[i] + "</label> </li>";
 		};
+
 		$('.answers').html(html);
 	}
 };
+
+
 	function checkAnswer(selection){
 		var question = instrument_questions[qCount];
 		if(selection == question.correct){
